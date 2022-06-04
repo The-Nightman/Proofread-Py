@@ -5,8 +5,9 @@ file_read = proofread_input.read()
 character_count = len(file_read)
 space_count = file_read.count(" ")
 underscore_count = file_read.count("_")
-paragraph_count = file_read.count("\n\n")
+line_count = file_read.count("\n") + 1
 word_count = len(file_read.split())
+paragraph_count = file_read.count("\n\n") + 1
 
 letter = 0
 num = 0
@@ -15,10 +16,6 @@ for i in file_read:
         letter += 1
     elif i.isdigit():
         num += 1
-
-line_count = 0
-for line in open('Python\proofreadtest.txt'):
-    line_count += 1
 
 specialchar_count = underscore_count + character_count - (letter + num + space_count + (line_count - 1))
 
@@ -30,4 +27,4 @@ print(f"Alphabetical characters: {letter}")
 print(f"Special characters: {specialchar_count}")
 print(f"Lines: {line_count}")
 print(f"Words: {word_count}")
-print(f"Paragraphs: {paragraph_count + 1}")
+print(f"Paragraphs: {paragraph_count}")
