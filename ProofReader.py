@@ -1,6 +1,3 @@
-#pip install english-words
-from english_words import english_words_set
-
 proofread_input = open(input("Enter file path here:\n"), "r")
 
 file_read = proofread_input.read()
