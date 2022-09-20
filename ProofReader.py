@@ -1,6 +1,14 @@
-proofread_input = open(input("Enter file path here:\n"), "r")
+proofread_input = input("Enter file path here:\n")
 
-file_read = proofread_input.read()
+proofread_file = open(proofread_input)
+
+fileextension = proofread_input.split(".")
+
+while fileextension[-1] != "txt":
+    proofread_file = input(("unsupported file type, please enter path of txt file:"))
+    fileextension = proofread_file.split(".")
+
+file_read = proofread_file.read()
 
 character_count = len(file_read)
 space_count = file_read.count(" ")
