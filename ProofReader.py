@@ -1,3 +1,6 @@
+# Proofread script written by The-Nightman
+# https://github.com/The-Nightman/Proofread-Py/
+
 import string
 
 word_dict = open('words.txt')
