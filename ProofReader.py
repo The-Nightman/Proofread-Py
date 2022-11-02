@@ -3,7 +3,7 @@
 
 import string
 
-word_dict = open('words.txt')
+word_dict = open("Proofreader\\words.txt")
 
 proofread_input = input("Enter file path here:\n")
 
